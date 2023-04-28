@@ -13,14 +13,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+            backgroundColor: Color.fromARGB(0, 85, 85, 85),
             body: MasonryGridView.builder(
-          gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3),
-          itemBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  child: Image.asset('assets/image${index + 1}.jpg'))),
-        )));
+              gridDelegate:
+                  const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3),
+              itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      child: Image.asset('assets/image${index + 1}.jpg'))),
+            )));
   }
 }
